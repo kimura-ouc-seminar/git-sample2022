@@ -7,6 +7,7 @@ save_dir = current_dir / "html"
 with sync_playwright() as p:
     browser = p.webkit.launch()
     page = browser.new_page()
+    # PoliInfo-3のURLだよ〜
     page.goto("https://poliinfo3.net/")
     page.screenshot(path="example.png")
     html = page.content()
